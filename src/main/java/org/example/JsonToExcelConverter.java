@@ -9,6 +9,7 @@ import org.apache.poi.ss.usermodel.*;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -123,12 +124,12 @@ public class JsonToExcelConverter {
      *
      * @param args
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) throws FileNotFoundException {
 
         JsonToExcelConverter converter = new JsonToExcelConverter();
-        File srcFile = new File("/Users/oleksii/Documents/GitHub/JSONtoXLS/src/main/resources/attendees.json");
-        File xlsxFile = converter.jsonFileToExcelFile(srcFile, ".xlsx");
-        System.out.println("Successfully converted JSON to Excel file at =" + xlsxFile.getAbsolutePath());
+        File srcFile = new File("/Users/oleksii/Documents/GitHub/JSONtoXLS/src/main/resources/startupExhibitors.json");
+        File xlsFile = converter.jsonFileToExcelFile(srcFile, ".xls");
+        System.out.println("Successfully converted JSON to Excel file at =" + xlsFile.getAbsolutePath());
 
     }
 }
