@@ -17,7 +17,7 @@ import java.util.Iterator;
 /**
  * JSON to XML converter task by KnubiSoft
  */
-public class JsonToExcelConverter {
+public class JsonToXmlJackson {
     private ObjectMapper mapper = new ObjectMapper();
 
     /**
@@ -126,7 +126,7 @@ public class JsonToExcelConverter {
      */
     public static void main(String[] args) throws FileNotFoundException {
 
-        JsonToExcelConverter converter = new JsonToExcelConverter();
+        JsonToXmlJackson converter = new JsonToXmlJackson();
         File srcFile = new File("/Users/oleksii/Documents/GitHub/JSONtoXLS/src/main/resources/startupExhibitors.json");
         File xlsFile = converter.jsonFileToExcelFile(srcFile, ".xls");
         System.out.println("Successfully converted JSON to Excel file at =" + xlsFile.getAbsolutePath());

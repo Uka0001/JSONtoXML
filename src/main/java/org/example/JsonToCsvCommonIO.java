@@ -5,7 +5,7 @@ import java.nio.file.*;
 import org.apache.commons.io.FileUtils;
 import org.json.*;
 
-public class JSONToExelCommonIO {
+public class JsonToCsvCommonIO {
 
     // Main driver method
     @SuppressWarnings("deprecation")
