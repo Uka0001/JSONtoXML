@@ -1,5 +1,6 @@
 package org.example;
 
+import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ArrayNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
@@ -44,7 +45,7 @@ public class JsonToExcelConverter {
                 }
 
                 //Reading the json file
-                ObjectNode jsonData = (ObjectNode) mapper.readTree(srcFile);
+                JsonNode jsonData = mapper.readTree(srcFile);
 
                 //Iterating over each sheets
                 Iterator<String> sheetItr = jsonData.fieldNames();
